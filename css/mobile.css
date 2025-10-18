@@ -1,0 +1,800 @@
+/* ===== VARIÁVEIS CSS ===== */
+:root {
+    --primary-color: #ffd700;
+    --secondary-color: #ffb700;
+    --text-color: #ffffff;
+    --bg-dark: #151414;
+    --bg-light: #1a1919;
+}
+
+
+/* ===== MEDIA QUERIES - MOBILE ===== */
+@media (max-width: 768px) {
+    body{
+          overflow-x: hidden;
+        font-family: sans-serif;
+
+    }
+    p{
+        font-size: 18px;
+        
+    }
+    .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+           width: 250px;
+        height: 400px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10012;
+    position: relative;
+}
+
+.nav.active {
+        width: 250px;
+    }
+    
+    .nav.active .menu a {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+    
+    .menu-toggle {
+        width: 26px;
+        height: 18px;
+    }
+    
+    .menu-toggle span {
+        height: 2.5px;
+    }
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    z-index: 10012;
+}
+    /* ===== HEADER E NAVEGAÇÃO MOBILE ===== */
+    .header {
+        padding: 0.8rem 5%;
+        height: 70px;
+        background-color: rgb(15 15 15 / 70%);
+    }
+    
+    .logo img {
+                width: 180px;
+        margin-top: 5%;
+        margin-left: -31%;
+    }
+    
+    /* Esconde menu desktop */
+    .nav {
+        display: none;
+    }
+    
+    /* Mostra hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Menu mobile ativo */
+    .nav.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 63vh;
+        background: linear-gradient(135deg, #151414 0%, #2a2a2a 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 9999;
+        padding-top: 80px;
+        overflow-y: auto;
+        margin-right: 0;
+    }
+    
+    .nav.active .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+    }
+    
+    .nav.active .menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav.active .menu a {
+        display: block;
+        padding: 18px 25px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    
+    .nav.active .menu a:hover {
+        background-color: rgba(255, 215, 0, 0.2);
+        color: #ffd700;
+    }
+    
+    /* Animações do hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Overlay de fundo quando menu está aberto */
+    .nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    
+    /* ===== CONTEÚDO PRINCIPAL MOBILE ===== */
+    .inicio {
+        height: 100vh;
+        background-image: url("../imagens/agricultura_sustentavel2cll.jpg");
+        animation: none;
+    }
+    
+    .textoinicial {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+              text-shadow: 2px 2px 15px #000000;
+
+        margin-bottom: 1rem;
+    }
+    
+    .abainicial {
+        padding: 0 8%;
+    }
+    
+    .abainicial p {
+        font-size: 17px;
+        text-shadow: 2px 2px 15px #000000;
+        margin-bottom: 1.5rem;
+        font-family: sans-serif;
+    }
+    
+    .botao {
+        padding: 0.8rem 1.8rem;
+        font-size: 18px;
+        font-family: sans-serif;
+    }
+    
+    .linha hr {
+        bottom: 100px;
+        height: 1px;
+    }
+    
+    /* ===== ÍCONES DE ACESSIBILIDADE (OCULTOS) ===== */
+  .icones {
+        position: fixed;
+        top: 39%;
+        right: 0px;
+        transform: translateY(-50%);
+        display: flex
+;
+        flex-direction: column;
+        gap: 8px;
+        width: 50px;
+        z-index: 1001;
+  }
+
+  .icones img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-subir {
+    position: fixed;
+    bottom: 15px; /* sobe um pouco pra não colar na borda */
+    right: 15px; /* evita sair pra fora */
+    width: 55px;
+    height: 55px;
+    display: flex; /* garante que apareça no mobile */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-subir img {
+    width: 55px;
+    height: 55px;
+    transition: all 0.3s ease;
+  }
+
+
+
+.btn-subir:hover {
+    transform: translateY(-3px);
+}
+
+.btn-subir:hover img {
+    transform: translateY(-2px);
+}
+
+/* ===== CONTEÚDO PRINCIPAL INICIAL ===== */
+.linha hr {
+    border: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgb(255 229 96), transparent);
+    margin: 0 3%;
+    position: absolute;
+    bottom: 120px;
+    width: 90%;
+    z-index: 1000;
+}
+
+    .btn-subir {
+        bottom: 15px;
+        right: 15px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .btn-subir img {
+        width: 45px;
+        height: 45px;
+    }
+    
+    /* ===== SEÇÃO FALA INICIAL MOBILE ===== */
+    .falainicial {
+        padding: 3rem 1rem;
+    }
+    
+    .falainicial h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .falainicial p {
+                font-size: 1.3rem;
+    }
+    
+    /* ===== SEÇÃO ESTATÍSTICAS MOBILE ===== */
+    .conteudo {
+       padding: 2rem 2rem;
+        margin-bottom: 5%;
+    background-color: transparent;
+    margin-top: -5%;
+    }
+    .conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    width: 100%;
+    margin-bottom: 15%;
+    align-items: center;
+    background-color: #1a1919;
+}
+.menu-fixo {
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.quadrados {
+    margin: 50px auto 50px auto;
+    width: 100%;
+    display: flex;
+    align-items: space-around;
+    max-width: 1200px;
+}
+
+.quadrado {
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    overflow: hidden;
+    color: white;
+}
+
+.quadrado img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.4s ease-out;
+    object-fit: cover;
+}
+
+.quadrado .text {
+    position: absolute;
+    padding: 30px;
+    height: calc(100% - 60px);
+}
+
+.quadrado h1 {
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgb(1 1 1);
+}
+
+.quadrado p {
+    font-weight: 300;
+    margin: 20px 0 0 0;
+    line-height: 25px;
+    transform: translateX(-200px);
+    transition-delay: 0.2s;
+    text-shadow: 2px 2px 10px rgb(1 1 1);
+}
+
+.animate-text {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+/* REMOVER HOVER E SUBSTITUIR POR CLASSE ACTIVE */
+.quadrado.active {
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+    transform: scale(1.05);
+    background-color: #2a2a2a;
+}
+
+.quadrado.active img {
+    opacity: 0.2;
+}
+
+.quadrado.active .animate-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Efeito de clique suave */
+.quadrado:active {
+    transform: scale(1.02);
+}
+/* ===== SEÇÃO ESTATÍSTICAS (QUADRADOS) ===== */
+.conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+    width: 100%;
+    margin-bottom: 15%;
+    align-items: center;
+    background-color: #1a1919;
+}
+.menu-fixo {
+    padding-bottom: env(safe-area-inset-bottom);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.quadrados {
+    margin: 50px auto 50px auto;
+    width: 100%;
+    display: flex;
+    align-items: space-around;
+    max-width: 1200px;
+}
+
+.quadrado {
+    width: 380px;
+    height: 380px;
+    margin: 10px;
+
+    display: inline-block;
+    background-size: cover;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.44);
+    overflow: hidden;
+    color: white;
+}
+
+.quadrado img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    transition: all 0.4s ease-out;
+    object-fit: cover;
+}
+
+.quadrado .text {
+    position: absolute;
+    padding: 30px;
+    height: calc(100% - 60px);
+}
+
+.quadrado h1 {
+    font-weight: 300;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgb(1 1 1);
+}
+
+.quadrado p {
+    font-weight: 300;
+    margin: 20px 0 0 0;
+    line-height: 25px;
+    transform: translateX(-200px);
+    transition-delay: 0.2s;
+    text-shadow: 2px 2px 10px rgb(1 1 1);
+}
+
+.animate-text {
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+}
+
+.quadrado:hover {
+    box-shadow: 0px 35px 77px -17px rgba(0,0,0,0.64);
+    transform: scale(1.05);
+        background-color: #1a1919;
+}
+
+.quadrado:hover img {
+    opacity: 0.2;
+    background-color: #1a1919;
+}
+
+.quadrado:hover .animate-text {
+    transform: translateX(0);
+    opacity: 1;
+}
+    .quadrados {
+  
+        flex-direction: column;
+                gap: 45px;
+        margin: 20px auto;
+    }
+    
+    .quadrado {
+            background-color: #1a1919;
+        width: 100%;
+               height: 370px;
+        margin: 0;
+        border-radius: 40px;
+    }
+    
+    .quadrado .text {
+        padding: 20px;
+    }
+    
+    .quadrado h1 {
+        font-size: 2.1rem;
+    }
+    
+    .quadrado p {
+        font-size: 18px;
+        line-height: 1.4;
+        font-family: sans-serif;
+    }
+
+    
+
+.animate-text {
+    opacity: 0;
+    
+    transition: all 0.6s ease-in-out;
+}
+
+    /* ===== SEÇÃO BRASIL MOBILE ===== */
+    .h4fotosmexem {
+        font-size: 1.7rem;
+        margin: 3rem 1rem 1rem;
+        text-align: center;
+        margin-top: 0;
+    }
+    
+    .textoimg {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+        
+    }
+    
+    .imggp {
+        margin-left: 0;
+        font-size: 18px;
+        text-align: center;
+        font-family: sans-serif;
+        margin-bottom: 10%;
+    }
+    
+    /* ===== CARROSSEL MOBILE ===== */
+    .carrossel-section {
+        padding: 3rem 1rem;
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    
+    .containerimagem {
+        height: 300px;
+    }
+    
+    .cards {
+        margin-top: 0;
+        margin-right: 0;
+    }
+    
+    .card {
+        width: 85%;
+    }
+    
+    /* ===== SEÇÃO METAS ONU MOBILE ===== */
+    .secao-planos {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 3rem 1rem;
+        margin-top: -7%;
+        margin-bottom: 5%;
+    }
+    
+    .titulo-linha {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .titulo-linha::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .carrossel-personalizado {
+        gap: 12px;
+        padding: 10px 0 20px;
+    }
+    .plano.ativo{
+            min-width: 375px;
+    }
+    .carrossel-personalizado::-webkit-scrollbar {
+        height: 5px;
+    }
+    
+    .plano {
+        min-width: 350px;
+        height: 500px;
+    }
+  
+    .descricao-plano {
+        padding: 15px;
+        transform: translateY(0) !important;
+    }
+    
+    .descricao-plano h3 {
+        font-size: 1.3rem;
+    }
+    
+    .descricao-plano p {
+       
+        opacity: 1 !important;
+        max-height: 550px !important;
+        font-family: sans-serif;
+    }
+    
+    /* ===== SEÇÃO AGRICULTURA SUSTENTÁVEL MOBILE ===== */
+    .bolas {
+        margin-bottom: 0;
+        padding: 3rem 1rem;
+        margin-top: -10%;
+    }
+    
+    .bolinhas {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        margin-top: 0;
+    }
+    
+    .bola1, .bola2, .bola3 {
+        border-radius: 50%;
+        border: 2px solid var(--primary-color);
+        overflow: hidden;
+        margin: 0 !important;
+    }
+    
+    .bola1 {
+         display: none;
+    }
+    
+    .bola2 {
+         width: 250px;
+        height: 250px;
+    }
+    
+    .bola3 {
+      display: none;
+    }
+    
+    .bola1 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .h4textobolas {
+        font-size: 1.6rem;
+        margin: 2rem 0 1rem;
+        text-align: center;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    .textobolas {
+        margin-top: 0;
+    }
+    
+    .pbolas {
+        margin: 0;
+        font-size: 18px;
+        text-align: center;
+        padding: 0 1rem;
+        font-family: sans-serif;
+    }
+    
+    .hrbolas {
+        margin: 2rem auto 0;
+        width: 80%;
+        height: 2px;
+    }
+    
+    /* ===== SEÇÃO VÍDEO MOBILE ===== */
+    .video {
+        min-height: auto;
+        padding: 3rem 1rem;
+        margin-top: 5%;
+    }
+    
+    .h4dosvideos {
+        font-size: 1.9rem;
+        margin-bottom: 2rem;
+    }
+    
+    .videoetexto {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .video-contener2 {
+        min-height: 250px;
+                width: 90%;
+    }
+    
+    .pdosvideos {
+        font-size: 18px;
+        padding: 20px;
+        font-family: sans-serif;
+    }
+    
+    .botao2 {
+        font-size: 18px;
+        padding: 0.8rem 1.8rem;
+        margin-top: 1.5rem;
+        font-family: sans-serif;
+    }
+    
+    /* ===== FOOTER MOBILE ===== */
+    .footer-cta {
+        padding: 2rem 1rem;
+    }
+    
+    .cta-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .cta-item {
+        min-width: auto;
+    }
+    
+    .footer-content {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .footer-principio {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-logo h3 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .footer-text p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+    
+    .footer-social-icon span {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-widget-heading h3 {
+        text-align: center;
+    }
+    
+    .footer-widget-heading h3::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+    
+    .copyright-text {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    
+    /* ===== FORMULÁRIO MOBILE ===== */
+    .rodape-formulario {
+        padding: 20px;
+    }
+    
+    .titulo-rodape {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .grupoform-duplo {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== LOGOS RODAPÉ MOBILE ===== */
+    .logosrodape, .logosrodape2, .logosrodape3 {
+        height: 40px;
+    }
+ 
+}
+

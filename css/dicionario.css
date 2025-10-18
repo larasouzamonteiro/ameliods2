@@ -1,0 +1,1046 @@
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #000000;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body.modo-claro {
+    background-color: rgb(255, 255, 255);
+}
+.conteudo-leitura {
+    display: block !important;
+    max-width: 850px;
+    margin: 0 auto;
+    MARGIN-BOTTOM: 8%;
+    padding: 40px 20px;
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+
+
+
+.btn-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  
+    text-decoration: none;
+}
+
+.btn-subir img {
+      width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.btn-subir:hover {
+    transform: translateY(-3px);
+  
+}
+
+.btn-subir:hover img {
+    transform: translateY(-2px);
+}
+
+.modo-claro .conteudo-leitura p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+    color: #000000;
+    font-size: 1.3rem;
+}
+/* ===== MODO CLARO - GLOSSÁRIO ===== */
+.modo-claro .glossario {
+    background: white;
+    margin-top: 10%;
+}
+
+.modo-claro .glossario h1 {
+    color: #000000;
+}
+
+.modo-claro .termo {
+    background: #f8f9fa;
+    border-left: 4px solid #000000;
+}
+
+.modo-claro .termo h2 {
+    color: #000000;
+}
+
+.modo-claro .termo p {
+    color: #333;
+}
+
+.conteudo-leitura p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+    color: #f8f8f6;
+    font-size: 1.3rem;
+}
+/* ===== BOTÃO MODO CLARO ===== */
+.icones {
+    margin-top: -2%;
+    position: fixed;
+    right: -8px;
+    margin-top: 153px;
+    width: 80px;
+    height: 66px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+.icones {
+    transition: opacity 0.3s ease;
+}
+.icones img{
+        width: 90%;
+    height: 55px;
+}
+
+.btn-subir {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+
+    text-decoration: none;
+}
+
+.btn-subir img {
+      width: 60px;
+    height: 60px;
+    transition: all 0.3s ease;
+}
+
+.btn-subir:hover {
+    transform: translateY(-3px);
+  
+}
+
+.btn-subir:hover img {
+    transform: translateY(-2px);
+}
+
+
+.glossario {
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 10%;
+    padding: 20px;
+}
+
+.glossario h1 {
+    text-align: center;
+    color: #ffd700;
+    margin-bottom: 30px;
+}
+
+.termo {
+      background: #2a2a2a;
+    margin-bottom: 14px;
+    padding: 4px;
+    height: 21%;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700;
+}
+
+.termo h2 {
+    color: #ffd700;
+    margin: 0 0 8px 0;
+    font-size: 1.2em;
+}
+
+.termo p {
+    color: white;
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* ===== SEÇÃO INICIAL ===== */
+.inicio {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: trocaFundo 12s infinite steps(1);
+}
+
+/* ===== HEADER ===== */
+.header {
+    margin-top: -1%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    height: 11%;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(15 15 15 / 35%);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.vw-plugin-top-wrapper {
+    z-index: 10000;
+}
+
+/* ===== LOGO ===== */
+.logo {
+    margin-left: 7%;
+    margin-top: 2%;
+    z-index: 1001;
+}
+
+.logo img {
+    width: 53%;
+}
+
+/* ===== NAVEGAÇÃO ===== */
+.nav {
+    margin-right: 12%;
+    display: flex;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    z-index: 1000;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 1.3rem;
+}
+
+.menu a {
+    padding: 0.8rem 1.2rem;
+    text-decoration: none;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1.5);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 0 5px;
+}
+
+.menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== MODO CLARO - MENU ===== */
+.modo-claro .menu a {
+    color: #f5f5f5;
+}
+
+.modo-claro .menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== MODO CLARO - FOOTER SECTION ===== */
+.modo-claro .footer-section {
+    background: #e0e0e0;
+    color: #333333;
+}
+
+.modo-claro .footer-cta {
+    border-bottom: 1px solid #dddddd;
+}
+
+.modo-claro .single-cta i {
+    color: #ffc600;
+}
+
+.modo-claro .cta-text h4 {
+    color: #333333;
+}
+
+.modo-claro .cta-text span {
+    color: #666666;
+    font-size: 18px;
+}
+
+.modo-claro .footer-logo h3 {
+    color: #fd9800;
+}
+
+.modo-claro .footer-logo span {
+    color: #458200;
+}
+
+.modo-claro .footer-text p {
+    color: #666666;
+}
+
+.modo-claro .footer-social-icon span {
+    color: #333333;
+}
+
+.modo-claro .social-link {
+    background: #ffc600;
+    color: #333333;
+}
+
+.modo-claro .social-link:hover {
+    background: #ffd700;
+}
+
+.modo-claro .footer-widget-heading h3 {
+    color: #333333;
+}
+
+.modo-claro .footer-widget-heading h3::before {
+    background: #ffc600;
+}
+
+.modo-claro .footer-links a {
+    color: #666666;
+}
+
+.modo-claro .footer-links a:hover {
+    color: #ffc600;
+}
+
+.modo-claro .copyright-text p {
+    color: #666666;
+}
+
+/* ===== MODO CLARO - FORMULÁRIO ===== */
+.modo-claro .rodape-formulario {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.modo-claro .titulo-rodape {
+    color: #373636;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.modo-claro .inputform {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #333;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.modo-claro .inputform::placeholder {
+    color: #666;
+}
+
+.modo-claro .inputform:focus {
+    outline: none;
+    border-color: #ffc600;
+}
+
+.modo-claro .botao-enviar {
+    background: #ffc600;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.modo-claro .botao-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 198, 0, 0.4);
+}
+
+.modo-claro .icone-enviar {
+    transition: transform 0.3s ease;
+}
+
+.modo-claro .botao-enviar:hover .icone-enviar {
+    transform: translateX(3px);
+}
+        
+
+        
+/* ===== FOOTER ===== */
+.footer-section {
+    background: #151414;
+    position: relative;
+    color: white;
+    margin-bottom: 0px;
+}
+
+.footer-cta {
+    border-bottom: 1px solid #373636;
+    padding: 40px 0;
+}
+
+.cta-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 290px;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+
+.cta-item {
+    flex: 1;
+    min-width: 250px;
+}
+
+.single-cta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.single-cta i {
+    color: #ffc600;
+    font-size: 30px;
+}
+
+.cta-text h4 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.cta-text span {
+    color: #bdc3c7;
+    font-size: 18px;
+}
+
+.footer-content {
+    padding: 60px 0 30px;
+}
+
+.footer-principio {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-logo h3 {
+    font-size: 32px;
+    color: #fd9800;
+    margin-bottom: 15px;
+}
+
+.footer-logo span {
+    color: #458200;
+}
+
+.footer-text p {
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #bdc3c7;
+    line-height: 1.6;
+}
+
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffc600;
+    color: #333;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #ffd700;
+    transform: translateY(-2px);
+}
+
+.social-links img {
+    height: 45px;
+}
+
+.footer-widget-heading h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.footer-widget-heading h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 2px;
+    width: 120px;
+    background: #ffc600;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffc600;
+}
+
+.copyright-text {
+    width: 100%;
+    font-size: 14px;
+    margin-top: 20%;
+    margin-left: -28%;
+    text-align: center;
+}
+
+.copyright-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #bdc3c7;
+    width: 100%;
+}
+
+/* ===== FORMULÁRIO ===== */
+.rodape-formulario {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.titulo-rodape {
+    color: #c5c5c5;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.formulario-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.grupoform-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.grupoform {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputform {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.inputform::placeholder {
+    color: #bdc3c7;
+}
+
+.textarea-form {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.botao-enviar {
+    background: linear-gradient(135deg, #ffd700 0%, #ffd700 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.botao-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+}
+
+.icone-enviar {
+    transition: transform 0.3s ease;
+}
+
+.botao-enviar:hover .icone-enviar {
+    transform: translateX(3px);
+}
+
+/* ===== LOGOS DO RODAPÉ ===== */
+.logosrodape {
+    height: 55px;
+}
+
+.logosrodape2 {
+    height: 55px;
+}
+
+.logosrodape3 {
+    height: 55px;
+}
+
+@media (max-width: 768px){
+
+    .conteudo-leitura h1{
+            padding-top: 10%;
+    font-size: 1.8rem;
+    text-align: center;
+    border-bottom: 1px solid #000
+    }
+    .conteudo-leitura p{
+            margin-bottom: 1.5em;
+    text-align: justify;
+    color: #f8f8f6;
+    font-size: 1.1rem;
+    }
+    .conteudo-leitura h2{
+            font-size: 1.3em;
+    margin-bottom: 7%;
+    }
+     .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+           width: 250px;
+        height: 400px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10012;
+    position: relative;
+}
+.nav.active {
+        width: 250px;
+    }
+    
+    .nav.active .menu a {
+        font-size: 1rem;
+        padding: 16px 20px;
+    }
+    
+    .menu-toggle {
+        width: 26px;
+        height: 18px;
+    }
+    
+    .menu-toggle span {
+        height: 2.5px;
+    }
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ffd700;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    z-index: 10012;
+}
+    /* ===== HEADER E NAVEGAÇÃO MOBILE ===== */
+    .header {
+        padding: 0.8rem 5%;
+        height: 70px;
+        background-color: rgb(15 15 15 / 70%);
+    }
+    
+    .logo img {
+                width: 180px;
+        margin-top: 5%;
+        margin-left: -31%;
+    }
+    
+    /* Esconde menu desktop */
+    .nav {
+        display: none;
+    }
+    
+    /* Mostra hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Menu mobile ativo */
+    .nav.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 63vh;
+        background: linear-gradient(135deg, #151414 0%, #2a2a2a 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 9999;
+        padding-top: 80px;
+        overflow-y: auto;
+        margin-right: 0;
+    }
+    
+    .nav.active .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+    }
+    
+    .nav.active .menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav.active .menu a {
+        display: block;
+        padding: 18px 25px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    
+    .nav.active .menu a:hover {
+        background-color: rgba(255, 215, 0, 0.2);
+        color: #ffd700;
+    }
+    
+    /* Animações do hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Overlay de fundo quando menu está aberto */
+    .nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+    /* ===== HEADER E NAVEGAÇÃO MOBILE ===== */
+    .header {
+        padding: 0.8rem 5%;
+        height: 70px;
+        background-color: rgb(15 15 15 / 70%);
+    }
+    
+    .logo img {
+                width: 180px;
+        margin-top: 5%;
+        margin-left: -31%;
+    }
+    
+    /* Esconde menu desktop */
+    .nav {
+        display: none;
+    }
+    
+    /* Mostra hambúrguer */
+    .menu-toggle {
+        display: flex;
+    }
+    
+    /* Menu mobile ativo */
+    .nav.active {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 63vh;
+        background: linear-gradient(135deg, #151414 0%, #2a2a2a 100%);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        transition: right 0.4s ease;
+        z-index: 9999;
+        padding-top: 80px;
+        overflow-y: auto;
+        margin-right: 0;
+    }
+    
+    .nav.active .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 1.1rem;
+    }
+    
+    .nav.active .menu li {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav.active .menu a {
+        display: block;
+        padding: 18px 25px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        width: 100%;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        margin: 0;
+    }
+    
+    .nav.active .menu a:hover {
+        background-color: rgba(255, 215, 0, 0.2);
+        color: #ffd700;
+    }
+    
+    /* Animações do hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+    
+    /* Overlay de fundo quando menu está aberto */
+    .nav.active::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    }
+   
+    .icones {
+        position: fixed;
+        top: 39%;
+        right: 0px;
+        transform: translateY(-50%);
+        display: flex
+;
+        flex-direction: column;
+        gap: 8px;
+        width: 50px;
+        z-index: 1001;
+  }
+
+  .icones img {
+    width: 100%;
+    height: auto;
+  }
+
+  .btn-subir {
+    position: fixed;
+    bottom: 15px; /* sobe um pouco pra não colar na borda */
+    right: 15px; /* evita sair pra fora */
+    width: 55px;
+    height: 55px;
+    display: flex; /* garante que apareça no mobile */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+
+  .btn-subir img {
+    width: 55px;
+    height: 55px;
+    transition: all 0.3s ease;
+  }
+
+
+
+.btn-subir:hover {
+    transform: translateY(-3px);
+}
+
+.btn-subir:hover img {
+    transform: translateY(-2px);
+}
+ .footer-cta {
+        padding: 2rem 1rem;
+    }
+    
+    .cta-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+    
+    .cta-item {
+        min-width: auto;
+    }
+    
+    .footer-content {
+        padding: 2rem 1rem 1rem;
+    }
+    
+    .footer-principio {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .footer-logo h3 {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    
+    .footer-text p {
+        text-align: center;
+        font-size: 0.95rem;
+    }
+    
+    .footer-social-icon span {
+        text-align: center;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .footer-widget-heading h3 {
+        text-align: center;
+    }
+    
+    .footer-widget-heading h3::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links {
+        align-items: center;
+    }
+    
+    .copyright-text {
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+    
+    /* ===== FORMULÁRIO MOBILE ===== */
+    .rodape-formulario {
+        padding: 20px;
+    }
+    
+    .titulo-rodape {
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    
+    .grupoform-duplo {
+        grid-template-columns: 1fr;
+    }
+    
+    /* ===== LOGOS RODAPÉ MOBILE ===== */
+    .logosrodape, .logosrodape2, .logosrodape3 {
+        height: 40px;
+    }
+}

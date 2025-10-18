@@ -1,0 +1,215 @@
+
+
+/* ===== MODO CLARO - CONFIGURAÇÕES GERAIS ===== */
+html.modo-claro {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+body.modo-claro {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ===== MODO CLARO - SEÇÃO INICIAL ===== */
+.modo-claro .inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, #f5f5f5, transparent 20%);
+    z-index: 2;
+}
+
+.modo-claro .menu a {
+    color: #f5f5f5;
+}
+
+.modo-claro .menu a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===== MODO CLARO - SEÇÕES DE CONTEÚDO ===== */
+.modo-claro .falainicial p {
+    color: #333;
+}
+
+.modo-claro .conteudo {
+    background-color: #ad951385;
+}
+
+.modo-claro .imggp {
+    color: #333;
+}
+
+.modo-claro .titulo-linha {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+}
+
+.modo-claro .pbolas {
+    color: #333;
+}
+
+.modo-claro .hrbolas {
+    background: #333;
+}
+
+/* ===== MODO CLARO - CARROSSEL ===== */
+.modo-claro .carrossel-personalizado {
+    scrollbar-color: #ffc600 #ccc;
+}
+
+.modo-claro .carrossel-personalizado::-webkit-scrollbar-track {
+    background: #ccc;
+}
+
+/* ===== MODO CLARO - FOOTER SECTION ===== */
+.modo-claro .footer-section {
+    background: #e0e0e0;
+    color: #333333;
+}
+
+.modo-claro .footer-cta {
+    border-bottom: 1px solid #dddddd;
+}
+
+.modo-claro .single-cta i {
+    color: #ffc600;
+}
+
+.modo-claro .cta-text h4 {
+    color: #333333;
+}
+
+.modo-claro .cta-text span {
+    color: #666666;
+    font-size: 18px;
+}
+
+.modo-claro .footer-logo h3 {
+    color: #fd9800;
+}
+
+.modo-claro .footer-logo span {
+    color: #458200;
+}
+
+.modo-claro .footer-text p {
+    color: #666666;
+}
+
+.modo-claro .footer-social-icon span {
+    color: #333333;
+}
+
+.modo-claro .social-link {
+    background: #ffc600;
+    color: #333333;
+}
+
+.modo-claro .social-link:hover {
+    background: #ffd700;
+}
+
+.modo-claro .footer-widget-heading h3 {
+    color: #333333;
+}
+
+.modo-claro .footer-widget-heading h3::before {
+    background: #ffc600;
+}
+
+.modo-claro .footer-links a {
+    color: #666666;
+}
+
+.modo-claro .footer-links a:hover {
+    color: #ffc600;
+}
+
+.modo-claro .copyright-text p {
+    color: #666666;
+}
+
+/* ===== MODO CLARO - FORMULÁRIO ===== */
+.modo-claro .rodape-formulario {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e0e0;
+}
+
+.modo-claro .titulo-rodape {
+    color: #373636;
+    text-align: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.modo-claro .inputform {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 15px;
+    color: #333;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.modo-claro .inputform::placeholder {
+    color: #666;
+}
+
+.modo-claro .inputform:focus {
+    outline: none;
+    border-color: #ffc600;
+}
+
+
+.modo-claro .botao-enviar {
+    background: #ffc600;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.modo-claro .botao-enviar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 198, 0, 0.4);
+}
+
+.modo-claro .icone-enviar {
+    transition: transform 0.3s ease;
+}
+
+.modo-claro .botao-enviar:hover .icone-enviar {
+    transform: translateX(3px);
+}
+/* ===== MODO CLARO - RESPONSIVIDADE ===== */
+@media (max-width: 1024px) {
+    .modo-claro .rodape-conteudo {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    
+    .modo-claro .rodape-formulario {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .modo-claro .grupoform-duplo {
+        grid-template-columns: 1fr;
+    }
+}
