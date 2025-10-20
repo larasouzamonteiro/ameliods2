@@ -1,0 +1,179 @@
+/* ===== RESPONSIVIDADE PARA 1366x768 E TELAS INTERMEDIÁRIAS ===== */
+@media screen and (max-width: 1366px) {
+
+  /* HEADER */
+  .header {
+    padding: 1rem 3%;
+    height: auto;
+  }
+
+  .logo img {
+    width: 45%;
+  }
+
+  .menu {
+    font-size: 1.1rem;
+    margin-top: 2%;
+  }
+
+  .menu a {
+    padding: 0.6rem 1rem;
+  }
+
+  /* HERO / INÍCIO */
+  .textoinicial {
+    font-size: 3rem;
+  }
+
+  .abainicial {
+    padding: 0 10%;
+  }
+
+  .abainicial p {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+
+  .botao {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  /* QUADRADOS (ESTATÍSTICAS) */
+  .quadrado {
+    width: 320px;
+    height: 320px;
+  }
+
+  .quadrados {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* CENÁRIO BRASILEIRO */
+  .h4fotosmexem {
+    font-size: 2.2rem;
+    margin-left: 8%;
+  }
+
+  .imggp {
+    max-width: 600px;
+    font-size: 1rem;
+  }
+
+  /* CARROSSEL DE IMAGENS */
+  .carrossel-section {
+    margin-left: 0;
+    margin-top: 5%;
+    padding: 3rem 2%;
+  }
+
+  .containerimagem {
+    height: 400px;
+  }
+
+  /* METAS ONU */
+  .plano {
+    min-width: 250px;
+    height: 350px;
+  }
+
+  .descricao-plano h3 {
+    font-size: 20px;
+  }
+
+  .descricao-plano p {
+    font-size: 15px;
+  }
+
+  /* BOLAS (AGRICULTURA) */
+  .bola1 {
+    width: 30%;
+  }
+
+  .bola2 {
+    width: 15%;
+    margin-left: 40%;
+  }
+
+  .bola3 {
+    width: 12%;
+    margin-left: 10%;
+  }
+
+  .h4textobolas {
+    font-size: 2.2rem;
+    margin-left: 50%;
+  }
+
+  .pbolas {
+    font-size: 1rem;
+    margin-left: 50%;
+  }
+
+  /* SEÇÃO VÍDEO */
+  .video {
+    min-height: 700px;
+    padding: 40px 3%;
+  }
+
+  .h4dosvideos {
+    font-size: 3.8rem;
+  }
+
+  .pdosvideos {
+    font-size: 1.1rem;
+    padding: 20px;
+  }
+
+  /* FOOTER */
+  .cta-row {
+    gap: 80px;
+  }
+
+  .footer-principio {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .copyright-text {
+    margin-top: 10%;
+    margin-left: 0;
+    font-size: 13px;
+  }
+}
+
+/* ===== TABLET / AJUSTE EXTRA OPCIONAL ===== */
+@media screen and (max-width: 1024px) {
+  .menu {
+    display: none;
+  }
+
+  .ma {
+    display: block;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 5%;
+  }
+
+  .abainicial {
+    padding: 0 8%;
+  }
+
+  .textoinicial {
+    font-size: 2.5rem;
+  }
+
+  .quadrado {
+    width: 90%;
+    height: auto;
+  }
+
+  .videoetexto {
+    flex-direction: column;
+  }
+
+  .footer-principio {
+    grid-template-columns: 1fr;
+  }
+}
